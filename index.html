@@ -6,134 +6,147 @@
     <title>Calculator</title>
     <link rel="stylesheet" href="style.css" />
   </head>
-  <body class="p-12 bg-gray-100 font-bold text-xl">
+  <body class="p-12 bg-gray-100 font-bold text-xl lg:mx-96 md:mx-48">
     <div class="flex flex-col items-center">
-      <div class="font-bold text-4xl p-12">Calculator</div>
+      <div class="font-bold text-4xl pb-8">Calculator</div>
       <div class="w-full">
-        <div id="textBox" class="h-32 w-full bg-gray-300 rounded-md mb-8">
-          <div
-            id="prev"
-            class="h-16 w-auto bg-gray-300 rounded-xl border border-b-black"
-          ></div>
-        </div>
+        <div
+          id="prev"
+          class="h-16 bg-gray-300 rounded-tl-xl rounded-tr-xl flex items-center justify-end pr-4"
+        ></div>
+        <div
+          id="textBox"
+          class="h-16 bg-gray-300 rounded-bl-xl rounded-br-xl mb-8 flex items-center justify-end pr-4"
+        ></div>
         <div class="buttons">
           <div>
-            <div class="h-20 w-full flex items-center justify-between">
+            <div
+              class="h-20 w-full grid grid-cols-4 gap-4 items-center justify-between"
+            >
               <button
-                class="h-12 w-12 bg-gray-300 rounded-md m-2 p-8 flex items-center justify-center"
+                class="bg-gray-300 rounded-md p-4 flex items-center justify-center"
                 id="1"
               >
                 1
               </button>
               <button
-                class="h-12 w-12 bg-gray-300 rounded-md m-2 p-8 flex items-center justify-center"
+                class="bg-gray-300 rounded-md p-4 flex items-center justify-center"
                 id="2"
               >
                 2
               </button>
               <button
-                class="h-12 w-12 bg-gray-300 rounded-md m-2 p-8 flex items-center justify-center"
+                class="bg-gray-300 rounded-md p-4 flex items-center justify-center"
                 id="3"
               >
                 3
               </button>
               <button
-                class="h-12 w-12 bg-gray-300 rounded-md m-2 p-8 flex items-center justify-center"
+                class="bg-gray-300 rounded-md p-4 flex items-center justify-center"
                 id="add"
               >
                 +
               </button>
             </div>
-            <div class="h-20 w-full flex items-center justify-between">
+            <div
+              class="h-20 w-full grid grid-cols-4 gap-4 items-center justify-between"
+            >
               <button
-                class="h-12 w-12 bg-gray-300 rounded-md m-2 p-8 flex items-center justify-center"
+                class="bg-gray-300 rounded-md p-4 flex items-center justify-center"
                 id="4"
               >
                 4
               </button>
               <button
-                class="h-12 w-12 bg-gray-300 rounded-md m-2 p-8 flex items-center justify-center"
+                class="bg-gray-300 rounded-md p-4 flex items-center justify-center"
                 id="5"
               >
                 5
               </button>
               <button
-                class="h-12 w-12 bg-gray-300 rounded-md m-2 p-8 flex items-center justify-center"
+                class="bg-gray-300 rounded-md p-4 flex items-center justify-center"
                 id="6"
               >
                 6
               </button>
               <button
-                class="h-12 w-12 bg-gray-300 rounded-md m-2 p-8 flex items-center justify-center"
+                class="bg-gray-300 rounded-md p-4 flex items-center justify-center"
                 id="subs"
               >
                 -
               </button>
             </div>
-            <div class="h-20 w-full flex items-center justify-between">
+            <div
+              class="h-20 w-full grid grid-cols-4 gap-4 items-center justify-between"
+            >
               <button
-                class="h-12 w-12 bg-gray-300 rounded-md m-2 p-8 flex items-center justify-center"
+                class="bg-gray-300 rounded-md p-4 flex items-center justify-center"
                 id="7"
               >
                 7
               </button>
               <button
-                class="h-12 w-12 bg-gray-300 rounded-md m-2 p-8 flex items-center justify-center"
+                class="bg-gray-300 rounded-md p-4 flex items-center justify-center"
                 id="8"
               >
                 8
               </button>
               <button
-                class="h-12 w-12 bg-gray-300 rounded-md m-2 p-8 flex items-center justify-center"
+                class="bg-gray-300 rounded-md p-4 flex items-center justify-center"
                 id="9"
               >
                 9
               </button>
               <button
-                class="h-12 w-12 bg-gray-300 rounded-md m-2 p-8 flex items-center justify-center"
+                class="bg-gray-300 rounded-md p-4 flex items-center justify-center"
                 id="mul"
               >
                 *
               </button>
             </div>
-            <div class="h-20 w-full flex items-center justify-between">
+            <div
+              class="h-20 w-full grid grid-cols-4 gap-4 items-center justify-between"
+            >
               <button
-                class="h-12 w-12 bg-gray-300 rounded-md m-2 p-8 flex items-center justify-center"
+                class="bg-gray-300 rounded-md p-4 flex items-center justify-center"
                 id="Clr"
               >
                 Clr
               </button>
               <button
-                class="h-12 w-12 bg-gray-300 rounded-md m-2 p-8 flex items-center justify-center"
+                class="bg-gray-300 rounded-md p-4 flex items-center justify-center"
                 id="0"
               >
                 0
               </button>
+
               <button
-                class="h-12 w-12 bg-gray-300 rounded-md m-2 p-8 flex items-center justify-center"
-                id="Del"
+                class="bg-gray-300 rounded-md p-4 flex items-center justify-center"
+                id="mod"
               >
-                Del
+                %
               </button>
               <button
-                class="h-12 w-12 bg-gray-300 rounded-md m-2 p-8 flex items-center justify-center"
+                class="bg-gray-300 rounded-md p-4 flex items-center justify-center"
                 id="div"
               >
                 /
               </button>
             </div>
-            <div class="h-20 w-full flex items-center justify-between">
+            <div
+              class="h-20 w-full grid grid-cols-2 gap-4 items-center justify-between"
+            >
               <button
-                id="res"
-                class="h-12 w-56 bg-gray-300 rounded-md m-2 p-8 flex items-center justify-center"
+                class="bg-gray-300 rounded-md p-4 flex items-center justify-center"
+                id="Del"
               >
-                =
+                Del
               </button>
               <button
-                class="h-12 w-12 bg-gray-300 rounded-md m-1 p-8 flex items-center justify-center"
-                id="mod"
+                id="res"
+                class="bg-gray-300 rounded-md p-4 flex items-center justify-center"
               >
-                %
+                =
               </button>
             </div>
           </div>

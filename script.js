@@ -21,84 +21,91 @@ for (var i = 0; i < 10; i++) {
 }
 
 btns.forEach((btn, id) => {
-  btn.addEventListener('click', () => {
+  btn.addEventListener('pointerdown', () => {
     textBox.innerHTML += id
   })
 })
 
-add.addEventListener('click', () => {
+add.addEventListener('pointerdown', () => {
   operationType = '+'
   value1 = parseInt(textBox.innerHTML)
   prev.innerHTML = value1 + ' ' + operationType
   textBox.innerHTML = ''
 })
 
-subs.addEventListener('click', () => {
+subs.addEventListener('pointerdown', () => {
   operationType = '-'
   value1 = parseInt(textBox.innerHTML)
   prev.innerHTML = value1 + ' ' + operationType
   textBox.innerHTML = ''
 })
 
-mul.addEventListener('click', () => {
+mul.addEventListener('pointerdown', () => {
   operationType = '*'
   value1 = parseInt(textBox.innerHTML)
   prev.innerHTML = value1 + ' ' + operationType
   textBox.innerHTML = ''
 })
 
-div.addEventListener('click', () => {
+div.addEventListener('pointerdown', () => {
   operationType = '/'
   value1 = parseInt(textBox.innerHTML)
   prev.innerHTML = value1 + ' ' + operationType
   textBox.innerHTML = ''
 })
 
-mod.addEventListener('click', () => {
+mod.addEventListener('pointerdown', () => {
   operationType = '%'
   value1 = parseInt(textBox.innerHTML)
   prev.innerHTML = value1 + ' ' + operationType
   textBox.innerHTML = ''
 })
 
-res.addEventListener('click', () => {
-  switch (operationType) {
-    case '+':
-      result = value1 + parseInt(textBox.innerHTML)
-      textBox.innerHTML = result
-      value1 = result
-      break
-    case '-':
-      result = value1 - parseInt(textBox.innerHTML)
-      textBox.innerHTML = result
-      value1 = result
-      break
-    case '*':
-      result = value1 * parseInt(textBox.innerHTML)
-      textBox.innerHTML = result
-      value1 = result
-      break
-    case '/':
-      result = Math.trunc(value1 / parseInt(textBox.innerHTML))
-      textBox.innerHTML = result
-      value1 = result
-      break
-    case '%':
-      result = value1 % parseInt(textBox.innerHTML)
-      textBox.innerHTML = result
-      value1 = result
-      break
-    default:
-      break
+res.addEventListener('pointerdown', () => {
+  if (parseInt(textBox.innerHTML) != NaN && value1 != 0) {
+    switch (operationType) {
+      case '+':
+        prev.innerHTML = prev.innerHTML + ' ' + textBox.innerHTML
+        result = value1 + parseInt(textBox.innerHTML)
+        textBox.innerHTML = result
+        value1 = result
+        break
+      case '-':
+        prev.innerHTML = prev.innerHTML + ' ' + textBox.innerHTML
+        result = value1 - parseInt(textBox.innerHTML)
+        textBox.innerHTML = result
+        value1 = result
+        break
+      case '*':
+        prev.innerHTML = prev.innerHTML + ' ' + textBox.innerHTML
+        result = value1 * parseInt(textBox.innerHTML)
+        textBox.innerHTML = result
+        value1 = result
+        break
+      case '/':
+        prev.innerHTML = prev.innerHTML + ' ' + textBox.innerHTML
+        result = Math.trunc(value1 / parseInt(textBox.innerHTML))
+        textBox.innerHTML = result
+        value1 = result
+        break
+      case '%':
+        prev.innerHTML = prev.innerHTML + ' ' + textBox.innerHTML
+        result = value1 % parseInt(textBox.innerHTML)
+        textBox.innerHTML = result
+        value1 = result
+        break
+      default:
+        break
+    }
   }
 })
 
-del.addEventListener('click', () => {
+del.addEventListener('pointerdown', () => {
   var temp = textBox.innerHTML.slice(0, textBox.innerHTML.length - 1)
   textBox.innerHTML = temp
 })
 
-clr.addEventListener('click', () => {
+clr.addEventListener('pointerdown', () => {
   textBox.innerHTML = ''
   prev.innerHTML = ''
   value1 = 0
